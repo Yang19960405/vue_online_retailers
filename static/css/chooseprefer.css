@@ -1,0 +1,113 @@
+@charset "utf-8";
+@font-face {
+	font-family: 'iconfont';  /* project id 247957 */
+	src: url('http://at.alicdn.com/t/font_wkv6intmx8cnxw29.eot');
+	src: url('http://at.alicdn.com/t/font_wkv6intmx8cnxw29.eot?#iefix') format('embedded-opentype'),
+	url('http://at.alicdn.com/t/font_wkv6intmx8cnxw29.woff') format('woff'),
+	url('http://at.alicdn.com/t/font_wkv6intmx8cnxw29.ttf') format('truetype'),
+	url('http://at.alicdn.com/t/font_wkv6intmx8cnxw29.svg#iconfont') format('svg');
+}
+.iconfont {
+	font-family:"iconfont" !important;
+	font-size:16px;
+	font-style:normal;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-width: 0.2px;
+	-moz-osx-font-smoothing: grayscale;
+}
+body{
+	font-family: "microsoft yahei";
+}
+ul,li{
+	list-style: none;
+	padding:0;
+	margin:0;
+}
+a{
+	text-decoration: none;
+}
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.prefer-choose {
+	width: 580px;
+	background: #fff;
+	z-index: 200;
+}
+.prefer-choose{
+	padding:22px;
+}
+.prefer-choose h4{
+	font-size:18px;
+	color:#333333;
+	padding-bottom:20px;
+	border-bottom:1px dashed #dbdbdb;
+}
+.prefer-choose p{
+	font-size:14px;
+	color:#999;
+	line-height:45px;
+	margin-bottom:0;
+}
+.prefer-choose .prefer-choose-text{
+	font-size:16px;
+	color:#333;
+	line-height:40px;
+	width:809px;
+	padding-left:15px;
+	background:#f3f3f3;
+	margin-bottom:25px;
+	margin-top:20px;
+}
+.prefer-choose-checkbox ul li{
+	width:142px;
+	height:43px;
+	border:1px solid #e8e8e8;
+	text-align: center;
+	background: #fff;
+	font-size:14px;
+	color:#333333;
+	line-height:43px;
+	margin-right:25px;
+	margin-bottom:25px;
+	float:left;
+	cursor: pointer;
+	overflow: hidden;
+	position:relative;
+}
+.prefer-choose-checkbox ul li.checked i{
+	display: block;
+}
+.prefer-choose-checkbox ul li.checked{
+	border:1px solid #e84c3d;
+}
+
+.prefer-choose>a{
+	width:154px;
+	height:48px;
+	border-radius: 6px;
+	display: block;
+	text-align: center;
+	line-height:48px;
+	background:#f36a5a;
+	float:right;
+	margin-top:20px;
+	color:#fff;
+	font-size:14px;
+}
+.prefer-choose-checkbox ul li i {
+	display: none;
+	color: #e84c3d;
+	position: absolute;
+
+	right: -4px;
+	bottom: -14px;
+	font-size: 20px;
+}
+.prefer-choose>a:hover{
+	background: #e84c3d;
+}
