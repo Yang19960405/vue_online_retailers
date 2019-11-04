@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import index from '@/components/home/index'
-import detail from '@/components/detail/detail'
-import order from '@/components/order/order'
+import index from '@/pages/home/index'
+import detail from '@/pages/detail/detail'
+import order from '@/pages/order/order'
 import axios from 'axios'
 import $ from 'jquery'
 
