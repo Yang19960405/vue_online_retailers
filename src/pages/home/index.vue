@@ -77,16 +77,16 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
           <div class="item active">
-            <img src="/static/images/img_fjords_wide.jpg" alt="...">
-            <div class="carousel-caption">第一个商品</div>
+            <img src="/static/images/img_fjords_wide.jpg" alt="第一个商品">
+            <div class="carousel-caption"></div>
           </div>
           <div class="item">
-            <img src="/static/images/img_nature_wide.jpg" alt="...">
-            <div class="carousel-caption">第二个商品</div>
+            <img src="/static/images/img_nature_wide.jpg" alt="第二个商品">
+            <div class="carousel-caption"></div>
           </div>
           <div class="item">
-            <img src="/static/images/img_mountains_wide.jpg" alt="...">
-            <div class="carousel-caption">第三个商品</div>
+            <img src="/static/images/img_mountains_wide.jpg" alt="第三个商品">
+            <div class="carousel-caption"></div>
           </div>
         </div>
 
