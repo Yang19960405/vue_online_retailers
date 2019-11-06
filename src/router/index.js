@@ -21,7 +21,7 @@ export default new Router({
       name:'detail',
       component:detail
     },{
-      path:'/order/:userId',
+      path:'/order',
       name:'order',
       component:order
     }

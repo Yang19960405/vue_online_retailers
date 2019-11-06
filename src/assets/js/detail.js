@@ -1,4 +1,5 @@
 import axios from 'axios'
+import {showTip} from '../../assets/js/login'
 
 
 $('#count-decrease').on('click', function() {
@@ -22,8 +23,10 @@ $( 'body').on('click','#cart-add', function() {
     goodsId: $(this).parents('.divGetId')[0].id,
     number: $("#goodCount").val(),
   }
-  axios.get("/cart/addCart", {
-    params: data
+  axios( {
+    url:"api/cart/addCart",
+    data: data,
+    method:"post"
   })
     .then(function (result) {
       if (result.data == true) {
@@ -41,8 +44,10 @@ $('body').on('click','#cart-buy', function () {
     goodsId: $(this).parents('.divGetId')[0].id,
     number: $("#goodCount").val(),
   }
-  axios.get("/cart/buyGoodQuick", {
-    params: data
+  axios({
+    url:"api/cart/buyGoodQuick",
+    data: data,
+    method:"post"
   })
     .then(function (result) {
       if (result.data == true) {

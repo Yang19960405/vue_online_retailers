@@ -133,9 +133,9 @@
           <div v-for="item in newgoods">
             <div class="col-sm-6 col-md-4">
               <div class="thumbnail goods-item">
-                <a :href="'/home/productView/'+item.id+''">
+                <router-link :to="{name:'detail',params:{goodId:item.id}}" >
                   <img :src="'/static/images/cover_picture/'+item.category.parentId+'/'+item.categoryId+'/'+item.id+'/'+item.url" alt="...">
-                </a>
+                </router-link>
                 <div class="caption div-desc" :id="item.id">
                   <h3>{{item.name}}</h3>
                   <p style="font-size:12px; color:dimgray">{{item.description}}</p>
@@ -193,7 +193,6 @@
             .then(function (response) {
               var a =eval(response.data);
               var json=JSON.parse(a.data)
-              console.log(json)
               that.hotgoods=json.hotGoods
               that.newgoods=json.newsGoods
             })

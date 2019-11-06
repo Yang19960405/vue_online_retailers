@@ -170,6 +170,7 @@
   import 'bootstrap/dist/js/bootstrap'
   import '../../assets/js/bootsnav'
   import '../../assets/js/pic_tab'
+
   import '../../assets/js/detail'
   import '../../assets/js/detail_2'
   import HomeHead1 from '../home/home.vue'

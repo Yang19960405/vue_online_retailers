@@ -1,6 +1,7 @@
 /*
     * 根据index获取 str
     * **/
+
 function byIndexLeve(index){
 	var str ="";
 	switch (index)
@@ -23,7 +24,7 @@ function byIndexLeve(index){
 	}
 	return str;
 }
-//  星星数量
+// 星星数量
 var stars = [
 	['x2.png', 'x1.png', 'x1.png', 'x1.png', 'x1.png'],
 	['x2.png', 'x2.png', 'x1.png', 'x1.png', 'x1.png'],
@@ -126,9 +127,9 @@ function InitStar(index){
 	}
 }
 
-$('.shopping-car-container').on('click', '.item-evaluate', function() {
+$('body').on('click', '.item-evaluate', function() {
 	var goodsInput = $(this).parents('.goods-item').find('.goods-operate')[0]
-	addevaluation=new ShoppingCarObserver(goodsInput);
+	addevaluation=this.ShoppingCarObserver(goodsInput);
 	obj=$(this);
 	$("#order_evaluation").css('display','')
 	InitStar(0);

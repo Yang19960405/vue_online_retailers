@@ -232,7 +232,7 @@ $('body').on("click",".a-order",function(){
     }).then(function (result) {
       console.log(result.data)
       if (result.data==true) {
-        router.push({path:'/order/order'})
+        router.push({path:'/order'})
       } else {
         showTip("请先登录！");
       }
@@ -283,7 +283,8 @@ $("#btnPrefer").on('click', function() {
 });
 
 export {
-  isLoginShow
+  isLoginShow,
+  showTip
 }
 
 
