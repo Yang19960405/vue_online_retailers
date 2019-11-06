@@ -14,6 +14,7 @@ module.exports = {
       //跨域设置
       '/api':{//使用‘api’代替‘http....’
         target:'http://10.2.225.148:8080/',//源地址
+        //target:'localhost:8080',
         changeOrigin:true,//改变源  是否跨域
         pathRewrite:{
           //用'/api'代替target里面的地址，后面组件中我们掉接口时直接用api代替

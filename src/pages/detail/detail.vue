@@ -36,11 +36,11 @@
         </div>
         <div class="col-md-6 divGetId" :id="goodsData.id">
           <ol class="Xcontent13">
-            <div class="Xcontent14"><a href="#" id="Xcontent14"><p>{{goodsData.goodsName}}</p></a></div>
-            <div class="Xcontent16"><p>{{goodsData.goodsIntroduce}}</p></div>
+            <div class="Xcontent14"><a href="#" id="Xcontent14"><p>{{goodsData.name}}</p></a></div>
+            <div class="Xcontent16"><p>{{goodsData.description}}</p></div>
             <div class="Xcontent17">
               <p class="Xcontent18">售价</p>
-              <p class="Xcontent19">￥<span>{{goodsData.goodsPrice}}</span></p>
+              <p class="Xcontent19">￥<span>{{goodsData.price}}</span></p>
               <div class="Xcontent20">
                 <p class="Xcontent21">促销</p>
                 <p class="Xcontent22">无</p>
@@ -109,7 +109,7 @@
             <div class="col-sm-6 col-md-4" v-for="evaluate in evaluates">
               <div class="thumbnail goods-item">
                 <div class="caption div-desc" >
-                  <p>{{evaluate.userName}}</p>
+                  <p>{{evaluate.userId}}</p>
                   <li data-default-index="0">
                                     <span>
                                         <img src="/static/images/x2.png" v-for="i in evaluate.grade">
@@ -134,12 +134,12 @@
             <div class="col-sm-6 col-md-4" v-for="similar in similars">
               <div class="thumbnail goods-item">
                 <a :href="'/home/productView/'+similar.id">
-                  <img :src="'/static/images/cover_picture/'+similar.category.parentId+'/'+similar.categoryId+'/'+similar.id+'/'+similar.url" alt="...">
+                  <img :src="'/static/images/cover_picture/'+similar.category.parentId+'/'+similar.categoryId+'/'+similar.id+'/'+similar.url" alt=".  ..">
                 </a>
                 <div class="caption div-desc" :id="similar.id">
-                  <h3>{{similar.userName}}</h3>
-                  <p style="font-size:12px; color:dimgray">{{similar.goodsIntroduce}}</p>
-                  <p style="color:red">&yen;{{similar.goodsPrice}}</p>
+                  <h3>{{similar.name}}</h3>
+                  <p style="font-size:12px; color:dimgray">{{similar.description}}</p>
+                  <p style="color:red">&yen;{{similar.price}}</p>
                   <p>
                       <button type="button" class="btn btn-danger cart-buy" >立即购买</button>
                       <button type="button" class="btn btn-default cart-add">加购物车</button>
@@ -195,12 +195,14 @@
       getDetailData:function () {
         var that_ = this;
         console.log(that_.goodsId)
-        axios.get("/api/detail/data?gId="+that_.goodsId)
+        axios.get("/api/home/productView/"+that_.goodsId)
           .then(function (response) {
-            var json=eval(response.data);
-            that_.goodsData=json.goods4ListAO
-            that_.evaluates=json.evaluateAOList
-            that_.similars=json.similarList
+            var a =eval(response.data);
+            var json=JSON.parse(a.data)
+            console.log(json.similarGoods[0].category)
+            that_.goodsData=json.goods
+            that_.evaluates=json.evaluates
+            that_.similars=json.similarGoods
         })
       }
     }

@@ -113,9 +113,9 @@
                 <img :src="'/static/images/cover_picture/'+item.category.parentId+'/'+item.categoryId+'/'+item.id+'/'+item.url" alt="...">
               </router-link>
               <div class="caption div-desc" :id="item.id">
-                <h3>{{item.goodsName}}</h3>
-                <p style="font-size:12px; color:dimgray">{{item.goodsIntroduce}}</p>
-                <p style="color:red">&yen;{{item.goodsPrice}}</p>
+                <h3>{{item.name}}</h3>
+                <p style="font-size:12px; color:dimgray">{{item.description}}</p>
+                <p style="color:red">&yen;{{item.price}}</p>
 
               </div>
             </div>
@@ -137,9 +137,9 @@
                   <img :src="'/static/images/cover_picture/'+item.category.parentId+'/'+item.categoryId+'/'+item.id+'/'+item.url" alt="...">
                 </a>
                 <div class="caption div-desc" :id="item.id">
-                  <h3>{{item.goodsName}}</h3>
-                  <p style="font-size:12px; color:dimgray">{{item.goodsIntroduce}}</p>
-                  <p style="color:red">&yen;{{item.goodsPrice}}</p>
+                  <h3>{{item.name}}</h3>
+                  <p style="font-size:12px; color:dimgray">{{item.description}}</p>
+                  <p style="color:red">&yen;{{item.price}}</p>
 
                 </div>
               </div>
@@ -191,20 +191,22 @@
           that.$axios.get('api/home/data', {
           })
             .then(function (response) {
-              var json=eval(response.data);
+              var a =eval(response.data);
+              var json=JSON.parse(a.data)
+              console.log(json)
               that.hotgoods=json.hotGoods
-              that.newgoods=json.newGoods
+              that.newgoods=json.newsGoods
             })
             .catch(function (response) {
               console.log(response);
             });
 
-          that.$axios.get('api/headSearch/data',{
-
+          that.$axios.get('api/home/head',{
           })
             .then(function (response) {
-              var json=eval(response.data);
-              that.headsearch=json.parentCategoryAOS
+              var a =eval(response.data);
+              var json=JSON.parse(a.data)
+              that.headsearch=json
             })
 
         }

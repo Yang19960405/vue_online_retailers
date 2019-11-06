@@ -77,7 +77,7 @@ var LOGIN = {
               $('#myLogin').modal('hide') //隐层模态框
               axios({
                 url:'api/user/checkPrefer',
-                method:'post',
+                method:'get',
                 data:data
               })
                 .then(function (response1) {
@@ -230,6 +230,7 @@ $('body').on("click",".a-order",function(){
     //检查用户是否登录
     axios.get( "api/user/checkLogin",{
     }).then(function (result) {
+      console.log(result.data)
       if (result.data==true) {
         router.push({path:'/order/order'})
       } else {
