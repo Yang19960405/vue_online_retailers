@@ -35,7 +35,6 @@ $( 'body').on('click','#cart-add', function() {
       else {
         showTip("请先登录");
       }
-
     })
 })
 

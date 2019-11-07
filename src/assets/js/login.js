@@ -113,6 +113,8 @@ $('body').on("click","#jump",function(){
     $('#myReg').modal('show') //显示模态框
 });
 
+
+
 //注册功能
 var REGISTER={
     inputcheck:function(){
@@ -216,7 +218,7 @@ $('body').on("click",".a-cart",function(){
     axios.get("api/user/checkLogin",{
     }).then(function (result) {
       if (result.data==true) {
-        window.location.href = "/cart/cartView/9/0";
+        router.push({path:'/cart'})
       } else {
         showTip("请先登录！");
       }

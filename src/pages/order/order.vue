@@ -29,7 +29,7 @@
                      style="width: 100px; height: 100px;" alt="..."/>
               </div>
               <div class="col-md-3 car-goods-info goods-params">{{order.goods.goodsName}}</div>
-              <div class="col-md-2 car-goods-info goods-price"><span>￥</span><span class="single-price">{{order.goods.goodsIntroduce}}</span></div>
+              <div class="col-md-2 car-goods-info goods-price"><span>￥</span><span class="single-price">{{order.goods.goodsPrice}}</span></div>
               <div class="col-md-1 car-goods-info goods-counts">{{order.number}}</div>
               <div class="col-md-2 car-goods-info goods-money-count"><span>￥</span><span class="single-total">{{order.goods.goodsPrice*order.number}}</span></div>
               <div class="col-md-2 car-goods-info goods-operate" :id="order.id+','+order.goodsId">

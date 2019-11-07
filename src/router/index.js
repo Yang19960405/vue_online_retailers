@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import index from '@/pages/home/index'
 import detail from '@/pages/detail/detail'
 import order from '@/pages/order/order'
+import cart from '@/pages/cart/cart'
 import axios from 'axios'
 import $ from 'jquery'
 
@@ -16,7 +17,8 @@ export default new Router({
       path: '/',
       name: 'index',
       component: index
-    }, {
+    },
+    {
       path:'/detail/:goodId',
       name:'detail',
       component:detail
@@ -24,6 +26,10 @@ export default new Router({
       path:'/order',
       name:'order',
       component:order
+    },{
+      path:'/cart',
+      name:'order',
+      component:cart
     }
   ]
 })

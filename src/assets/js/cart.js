@@ -1,5 +1,5 @@
-export default {
-  ShoppingCarObserver:function (elInput, isAdd){
+
+function ShoppingCarObserver(elInput, isAdd){
   this.elInput = elInput
   this.parents = this.elInput.parents('.goods-item')
   this.count = parseInt(this.elInput.val())//count:购物车Id
@@ -89,8 +89,8 @@ export default {
       }
     }
   }
-},
-  checkedAll: function (_this) {
+}
+function checkedAll(_this) {
   if ($('.goods-item').length <= 0) {
     $('.submitData').addClass('submitDis')
   } else {
@@ -115,112 +115,109 @@ export default {
       }
     }
   }
-},
-  cartDocument:$(document).ready(function () {
-    $('#check-goods-all').on('change', function () {
-      if (this.checked) {
-        $('#checked-all-bottom').prop('checked', true)
-      } else {
-        $('#checked-all-bottom').prop('checked', false)
-      }
-      checkedAll(this)
-    })
-    $('#checked-all-bottom').on('change', function () {
-      if (this.checked) {
-        $('#check-goods-all').prop('checked', true)
-      } else {
-        $('#check-goods-all').prop('checked', false)
-      }
-      checkedAll(this)
-    })
-    $('.goods-list-item').on('change', function () {
-      var tmpCheckEl = $(this)
-      var checkEvent = new ShoppingCarObserver(tmpCheckEl, null)
-      checkEvent.checkedChange()
-      checkEvent.checkIsAll()
-    })
-    $('.goods-content').on('click', '.car-decrease', function () {
-      var goodsInput = $(this).parents('.input-group').find('.goods-count')
-      var decreaseCount = new ShoppingCarObserver(goodsInput, false)
-      decreaseCount.showCount()
-      decreaseCount.computeGoodsMoney()
-    })
-    $('.goods-content').on('click', '.car-add', function () {
-      var goodsInput = $(this).parents('.input-group').find('.goods-count')
-      var addCount = new ShoppingCarObserver(goodsInput, true)
-      addCount.showCount()
-      addCount.computeGoodsMoney()
-    })
-    $('.goods-content').on('click', '.item-delete', function () {
-      var goodsInput = $(this).parents('.goods-item').find('.goods-list-item')
-      deleteGoods = new ShoppingCarObserver(goodsInput, null)
-      $('#deleteItemTip').modal('show')
-    })
-    $('.deleteSure').on('click', function () {
-      if (deleteGoods !== null) {
-        //ajax代码实现
-        $.ajax({
-          type: "POST",
-          url: "/cart/deleteCartByIds/" + deleteGoods.count,
-        });
-        deleteGoods.deleteGoods()
-      }
-      $('#deleteItemTip').modal('hide')
-    })
-    $('#deleteMulty').on('click', function () {
-      if ($('.goods-list-item:checked').length <= 0) {
-        $('#selectItemTip').modal('show')
-      } else {
-        $('#deleteMultyTip').modal('show')
-      }
-    })
-    $('.deleteMultySure').on('click', function () {
-      var Ids = "";
-      for (var i = 0; i < $('.goods-list-item:checked').length; i++) {
-        var multyDelete = new ShoppingCarObserver($('.goods-list-item:checked').eq(i), null)
-        multyDelete.deleteGoods()
-        Ids = Ids + multyDelete.count + ","
-        i--
-      }
-      //ajax代码实现
-      $.ajax({
-        type: "POST",
-        url: "/cart/deleteCartByIds/" + Ids,
-      });
-      multyDelete.checkOptions()
-      $('#deleteMultyTip').modal('hide')
-    })
-
-    $('#updateMulty').on('click', function () {
-      if ($('.goods-list-item:checked').length <= 0) {
-        $('#selectItemTip').modal('show')
-      } else {
-        $('#updateMultyTip').modal('show')
-      }
-    })
-    $('.updateMultySure').on('click', function () {
-      var myArray = new Array();
-      for (var i = 0; i < $('.goods-list-item:checked').length; i++) {
-        var multyUpdate = new ShoppingCarObserver($('.goods-list-item:checked').eq(i), null)
-        multyUpdate.deleteGoods()
-        myArray.push({id: multyUpdate.count, number: multyUpdate.number})
-        i--
-      }
-
-      //ajax代码实现
-      $.ajax({
-        type: "POST",
-        url: "/cart/buyGoods",
-        data: JSON.stringify(myArray),
-        dataType: "json",
-        contentType: "application/json",
-        success: function (result) {
-          //alert(result);
-        }
-      });
-      multyUpdate.checkOptions()
-      $('#updateMultyTip').modal('hide')
-    })
-  })
-
 }
+
+$('body').on('change', '#check-goods-all',function () {
+  if (this.checked) {
+    $('#checked-all-bottom').prop('checked', true)
+  } else {
+    $('#checked-all-bottom').prop('checked', false)
+  }
+  checkedAll(this)
+})
+$('body').on('change','#checked-all-bottom', function () {
+  if (this.checked) {
+    $('#check-goods-all').prop('checked', true)
+  } else {
+    $('#check-goods-all').prop('checked', false)
+  }
+  checkedAll(this)
+})
+$('body').on('change','.goods-list-item', function () {
+  var tmpCheckEl = $(this)
+  var checkEvent = new ShoppingCarObserver(tmpCheckEl, null)
+  checkEvent.checkedChange()
+  checkEvent.checkIsAll()
+})
+$('body').on('click', '.car-decrease', function () {
+  var goodsInput = $(this).parents('.input-group').find('.goods-count')
+  var decreaseCount = new ShoppingCarObserver(goodsInput, false)
+  decreaseCount.showCount()
+  decreaseCount.computeGoodsMoney()
+})
+$('body').on('click', '.car-add', function () {
+  var goodsInput = $(this).parents('.input-group').find('.goods-count')
+  var addCount = new ShoppingCarObserver(goodsInput, true)
+  addCount.showCount()
+  addCount.computeGoodsMoney()
+})
+$('body').on('click', '.item-delete', function () {
+  var goodsInput = $(this).parents('.goods-item').find('.goods-list-item')
+  deleteGoods = new ShoppingCarObserver(goodsInput, null)
+  $('#deleteItemTip').modal('show')
+})
+$('body').on('click', '.deleteSure',function () {
+  if (deleteGoods !== null) {
+    //ajax代码实现
+    $.ajax({
+      type: "POST",
+      url: "api/cart/deleteCartByIds/" + deleteGoods.count,
+    });
+    deleteGoods.deleteGoods()
+  }
+  $('#deleteItemTip').modal('hide')
+})
+$('body').on('click','#deleteMulty', function () {
+  if ($('.goods-list-item:checked').length <= 0) {
+    $('#selectItemTip').modal('show')
+  } else {
+    $('#deleteMultyTip').modal('show')
+  }
+})
+$('body').on('click', '.deleteMultySure',function () {
+  var Ids = "";
+  for (var i = 0; i < $('.goods-list-item:checked').length; i++) {
+    var multyDelete = new ShoppingCarObserver($('.goods-list-item:checked').eq(i), null)
+    multyDelete.deleteGoods()
+    Ids = Ids + multyDelete.count + ","
+    i--
+  }
+  //ajax代码实现
+  $.ajax({
+    type: "POST",
+    url: "/cart/deleteCartByIds/" + Ids,
+  });
+  multyDelete.checkOptions()
+  $('#deleteMultyTip').modal('hide')
+})
+
+$('body').on('click', '#updateMulty',function () {
+  if ($('.goods-list-item:checked').length <= 0) {
+    $('#selectItemTip').modal('show')
+  } else {
+    $('#updateMultyTip').modal('show')
+  }
+})
+$('body').on('click','.updateMultySure', function () {
+  var myArray = new Array();
+  for (var i = 0; i < $('.goods-list-item:checked').length; i++) {
+    var multyUpdate = new ShoppingCarObserver($('.goods-list-item:checked').eq(i), null)
+    multyUpdate.deleteGoods()
+    myArray.push({id: multyUpdate.count, number: multyUpdate.number})
+    i--
+  }
+
+  //ajax代码实现
+  $.ajax({
+    type: "POST",
+    url: "api/cart/buyGoods",
+    data: JSON.stringify(myArray),
+    dataType: "json",
+    contentType: "application/json",
+    success: function (result) {
+      //alert(result);
+    }
+  });
+  multyUpdate.checkOptions()
+  $('#updateMultyTip').modal('hide')
+})
