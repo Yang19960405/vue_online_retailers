@@ -1,7 +1,9 @@
 <template>
 
   <div style="background-color: black;height:50px;">
+
     <div class="container" id="header_info" style="line-height:50px;text-align: right;color:#C9C9C9;">
+        <img src="../../../static/images/logo.png" alt="logo" class="logo" style="height: 50px; float: left">
       <a class="a-index">首页</a> &nbsp;&nbsp;|&nbsp;&nbsp;
       <a class="a-order">我的订单</a> &nbsp;&nbsp;|&nbsp;&nbsp;
       <a class="a-cart">购物车</a>&nbsp;&nbsp;|&nbsp;&nbsp;

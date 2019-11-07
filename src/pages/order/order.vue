@@ -25,7 +25,7 @@
             <div class="panel-body">
               <div class="col-md-2 car-goods-info goods-image-column">
                 <img class="goods-image"
-                     :src="'/static/images/cover_picture/'+order.parentCategoryId+'/'+order.goods.categoryId+'/'+order.goods.id+'/'+order.goods.url"
+                     v-lazy="'/static/images/cover_picture/'+order.parentCategoryId+'/'+order.goods.categoryId+'/'+order.goods.id+'/'+order.goods.url"
                      style="width: 100px; height: 100px;" alt="..."/>
               </div>
               <div class="col-md-3 car-goods-info goods-params">{{order.goods.goodsName}}</div>
@@ -63,11 +63,11 @@
                 <ul>
                   <li data-default-index="0">
                                     <span>
-                                        <img src="/static/images/x1.png">
-                                        <img src="/static/images/x1.png">
-                                        <img src="/static/images/x1.png">
-                                        <img src="/static/images/x1.png">
-                                        <img src="/static/images/x1.png">
+                                        <img v-lazy="'/static/images/x1.png'">
+                                        <img v-lazy="'/static/images/x1.png'">
+                                        <img v-lazy="'/static/images/x1.png'">
+                                        <img v-lazy="'/static/images/x1.png'">
+                                        <img v-lazy="'/static/images/x1.png'">
                                     </span>
                     <em class="level"></em>
                   </li>

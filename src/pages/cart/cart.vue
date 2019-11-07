@@ -29,7 +29,7 @@
               </div>
               <div class="col-md-2 car-goods-info goods-image-column">
                 <img class="goods-image"
-                     :src="'/static/images/cover_picture/'+cart.parentCategoryId+'/'+cart.goods.categoryId+'/'+cart.goods.id+'/'+cart.goods.url"
+                     v-lazy="'/static/images/cover_picture/'+cart.parentCategoryId+'/'+cart.goods.categoryId+'/'+cart.goods.id+'/'+cart.goods.url"
                      style="width: 100px; height: 100px;" />
               </div>
               <div class="col-md-3 car-goods-info goods-params">{{cart.goods.goodsName}}</div>

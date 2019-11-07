@@ -6,7 +6,7 @@
         <div class="col-sm-6 col-md-4">
           <div class="thumbnail goods-item">
             <router-link :to="{name:'detail',params:{goodId:item.id}}" >
-              <img :src="'/static/images/cover_picture/'+item.category.parentId+'/'+item.categoryId+'/'+item.id+'/'+item.url" alt="...">
+              <img v-lazy="'/static/images/cover_picture/'+item.category.parentId+'/'+item.categoryId+'/'+item.id+'/'+item.url" alt="...">
             </router-link>
             <div class="caption div-desc" :id="item.id">
               <h3>{{item.name}}</h3>

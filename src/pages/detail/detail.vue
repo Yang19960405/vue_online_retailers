@@ -11,26 +11,26 @@
         <div class="col-md-6">
           <div class="ban" id="demo1">
             <div class="ban2" id="ban_pic1">
-              <div class="prev1" id="prev1"><img src="/static/images/index_tab_l.png" width="28" height="51"  alt=""></div>
-              <div class="next1" id="next1"><img src="/static/images/index_tab_r.png" width="28" height="51"  alt=""></div>
+              <div class="prev1" id="prev1"><img v-lazy="'/static/images/index_tab_l.png'" width="28" height="51"  alt=""></div>
+              <div class="next1" id="next1"><img v-lazy="'/static/images/index_tab_r.png'" width="28" height="51"  alt=""></div>
               <ul class="slide" v-model="goodsData">
-                <li><a href="javascript:;"><img class="slide1"  width="500" height="500" alt="" :src="'static/images/slide_picture/'+goodsData.category.parentId+'/'+goodsData.categoryId+'/'+goodsData.id+'/'+goodsData.slide_1+''"></a></li>
-                <li><a href="javascript:;"><img class="slide2"  width="500" height="500" alt="" :src="'static/images/slide_picture/'+goodsData.category.parentId+'/'+goodsData.categoryId+'/'+goodsData.id+'/'+goodsData.slide_2+''"></a></li>
-                <li><a href="javascript:;"><img class="slide3"  width="500" height="500" alt="" :src="'static/images/slide_picture/'+goodsData.category.parentId+'/'+goodsData.categoryId+'/'+goodsData.id+'/'+goodsData.slide_3+''"></a></li>
-                <li><a href="javascript:;"><img class="slide4"  width="500" height="500" alt="" :src="'static/images/slide_picture/'+goodsData.category.parentId+'/'+goodsData.categoryId+'/'+goodsData.id+'/'+goodsData.slide_4+''"></a></li>
+                <li><a href="javascript:;"><img class="slide1"  width="500" height="500" alt="" v-lazy="'static/images/slide_picture/'+goodsData.category.parentId+'/'+goodsData.categoryId+'/'+goodsData.id+'/'+goodsData.slide_1+''"></a></li>
+                <li><a href="javascript:;"><img class="slide2"  width="500" height="500" alt="" v-lazy="'static/images/slide_picture/'+goodsData.category.parentId+'/'+goodsData.categoryId+'/'+goodsData.id+'/'+goodsData.slide_2+''"></a></li>
+                <li><a href="javascript:;"><img class="slide3"  width="500" height="500" alt="" v-lazy="'static/images/slide_picture/'+goodsData.category.parentId+'/'+goodsData.categoryId+'/'+goodsData.id+'/'+goodsData.slide_3+''"></a></li>
+                <li><a href="javascript:;"><img class="slide4"  width="500" height="500" alt="" v-lazy="'static/images/slide_picture/'+goodsData.category.parentId+'/'+goodsData.categoryId+'/'+goodsData.id+'/'+goodsData.slide_4+''"></a></li>
               </ul>
             </div>
             <div class="min_pic">
               <div class="prev_btn1" id="prev_btn1"><img src="/static/images/feel3.png" width="9" height="18"  alt=""></div>
               <div class="num clearfix" id="ban_num1">
                 <ul class="slide">
-                  <li><a href="javascript:;"><img class="slide1" width="80" height="80" alt="" :src="'static/images/slide_picture/'+goodsData.category.parentId+'/'+goodsData.categoryId+'/'+goodsData.id+'/'+goodsData.slide_1+''"></a></li>
-                  <li><a href="javascript:;"><img class="slide2" width="80" height="80" alt="" :src="'static/images/slide_picture/'+goodsData.category.parentId+'/'+goodsData.categoryId+'/'+goodsData.id+'/'+goodsData.slide_2+''"></a></li>
-                  <li><a href="javascript:;"><img class="slide3" width="80" height="80" alt="" :src="'static/images/slide_picture/'+goodsData.category.parentId+'/'+goodsData.categoryId+'/'+goodsData.id+'/'+goodsData.slide_3+''"></a></li>
-                  <li><a href="javascript:;"><img class="slide4" width="80" height="80" alt="" :src="'static/images/slide_picture/'+goodsData.category.parentId+'/'+goodsData.categoryId+'/'+goodsData.id+'/'+goodsData.slide_4+''"></a></li>
+                  <li><a href="javascript:;"><img class="slide1" width="80" height="80" alt="" v-lazy="'static/images/slide_picture/'+goodsData.category.parentId+'/'+goodsData.categoryId+'/'+goodsData.id+'/'+goodsData.slide_1+''"></a></li>
+                  <li><a href="javascript:;"><img class="slide2" width="80" height="80" alt="" v-lazy="'static/images/slide_picture/'+goodsData.category.parentId+'/'+goodsData.categoryId+'/'+goodsData.id+'/'+goodsData.slide_2+''"></a></li>
+                  <li><a href="javascript:;"><img class="slide3" width="80" height="80" alt="" v-lazy="'static/images/slide_picture/'+goodsData.category.parentId+'/'+goodsData.categoryId+'/'+goodsData.id+'/'+goodsData.slide_3+''"></a></li>
+                  <li><a href="javascript:;"><img class="slide4" width="80" height="80" alt="" v-lazy="'static/images/slide_picture/'+goodsData.category.parentId+'/'+goodsData.categoryId+'/'+goodsData.id+'/'+goodsData.slide_4+''"></a></li>
                 </ul>
               </div>
-              <div class="next_btn1" id="next_btn1"><img src="/static/images/feel4.png" width="9" height="18"  alt=""></div>
+              <div class="next_btn1" id="next_btn1"><img v-lazy="'/static/images/feel4.png'" width="9" height="18"  alt=""></div>
             </div>
           </div>
         </div>
@@ -68,15 +68,15 @@
       </div>
     </div>
     <div class="pop_up" id="demo2">
-      <div class="pop_up_xx"><img src="/static/images/chacha3.png" width="40" height="40"  alt=""></div>
+      <div class="pop_up_xx"><img v-lazy="'/static/images/chacha3.png'" width="40" height="40"  alt=""></div>
       <div class="pop_up2" id="ban_pic2">
-        <div class="prev1" id="prev2"><img src="/static/images/index_tab_l.png" width="28" height="51"  alt=""></div>
-        <div class="next1" id="next2"><img src="/static/images/index_tab_r.png" width="28" height="51"  alt=""></div>
+        <div class="prev1" id="prev2"><img v-lazy="'/static/images/index_tab_l.png'" width="28" height="51"  alt=""></div>
+        <div class="next1" id="next2"><img v-lazy="'/static/images/index_tab_r.png'" width="28" height="51"  alt=""></div>
         <ul class="slide">
-          <li><a href="javascript:;"><img class="slide1" width="500" height="500" alt="" :src="'static/images/slide_picture/'+goodsData.category.parentId+'/'+goodsData.categoryId+'/'+goodsData.id+'/'+goodsData.slide_1+''"></a></li>
-          <li><a href="javascript:;"><img class="slide2" width="500" height="500" alt="" :src="'static/images/slide_picture/'+goodsData.category.parentId+'/'+goodsData.categoryId+'/'+goodsData.id+'/'+goodsData.slide_2+''"></a></li>
-          <li><a href="javascript:;"><img class="slide3" width="500" height="500" alt="" :src="'static/images/slide_picture/'+goodsData.category.parentId+'/'+goodsData.categoryId+'/'+goodsData.id+'/'+goodsData.slide_3+''"></a></li>
-          <li><a href="javascript:;"><img class="slide4" width="500" height="500" alt="" :src="'static/images/slide_picture/'+goodsData.category.parentId+'/'+goodsData.categoryId+'/'+goodsData.id+'/'+goodsData.slide_4+''"></a></li>
+          <li><a href="javascript:;"><img class="slide1" width="500" height="500" alt="" v-lazy="'static/images/slide_picture/'+goodsData.category.parentId+'/'+goodsData.categoryId+'/'+goodsData.id+'/'+goodsData.slide_1+''"></a></li>
+          <li><a href="javascript:;"><img class="slide2" width="500" height="500" alt="" v-lazy="'static/images/slide_picture/'+goodsData.category.parentId+'/'+goodsData.categoryId+'/'+goodsData.id+'/'+goodsData.slide_2+''"></a></li>
+          <li><a href="javascript:;"><img class="slide3" width="500" height="500" alt="" v-lazy="'static/images/slide_picture/'+goodsData.category.parentId+'/'+goodsData.categoryId+'/'+goodsData.id+'/'+goodsData.slide_3+''"></a></li>
+          <li><a href="javascript:;"><img class="slide4" width="500" height="500" alt="" v-lazy="'static/images/slide_picture/'+goodsData.category.parentId+'/'+goodsData.categoryId+'/'+goodsData.id+'/'+goodsData.slide_4+''"></a></li>
         </ul>
       </div>
     </div>
@@ -93,11 +93,11 @@
         <!--goods display-->
         <div v-if="goodsData.detailPicture.length!=0">
           <p v-for="detailPicture in goodsData.detailPicture">
-            <img :src="'/static/images/detail_picture/'+goodsData.category.parentId+'/'+goodsData.categoryId+'/'+goodsData.id+'/'+detailPicture" width="800" height="180" alt="">
+            <img v-lazy="'/static/images/detail_picture/'+goodsData.category.parentId+'/'+goodsData.categoryId+'/'+goodsData.id+'/'+detailPicture" width="800" height="180" alt="">
           </p>
         </div>
         <div v-else>
-          <p><img src="/static/images/no_data.png" width="400" height="180" alt=""></p>
+          <p><img v-lazy="'/static/images/no_data.png'" width="400" height="180" alt=""></p>
         </div>
       </div>
 
@@ -112,8 +112,8 @@
                   <p>{{evaluate.userId}}</p>
                   <li data-default-index="0">
                                     <span>
-                                        <img src="/static/images/x2.png" v-for="i in evaluate.grade">
-                                        <img src="/static/images/x1.png" v-for="i in 5-evaluate.grade">
+                                        <img v-lazy="'/static/images/x2.png'" v-for="i in evaluate.grade">
+                                        <img v-lazy="'/static/images/x1.png'" v-for="i in 5-evaluate.grade">
                                     </span>
                     <em class="level"></em>
                   </li>
@@ -134,7 +134,7 @@
             <div class="col-sm-6 col-md-4" v-for="similar in similars">
               <div class="thumbnail goods-item">
                 <a :href="'/home/productView/'+similar.id">
-                  <img :src="'/static/images/cover_picture/'+similar.category.parentId+'/'+similar.categoryId+'/'+similar.id+'/'+similar.url" alt=".  ..">
+                  <img v-lazy="'/static/images/cover_picture/'+similar.category.parentId+'/'+similar.categoryId+'/'+similar.id+'/'+similar.url" alt=".  ..">
                 </a>
                 <div class="caption div-desc" :id="similar.id">
                   <h3>{{similar.name}}</h3>
