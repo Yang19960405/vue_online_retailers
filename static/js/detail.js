@@ -1,4 +1,4 @@
-
+import router from 'vue-router'
 $('#count-decrease').on('click', function() {
 	var i= parseInt($("#goodCount").val())
 	if(i <= 1) {
@@ -36,6 +36,10 @@ $('#cart-add').on('click', function() {
 			}
 		}
 	});
+})
+
+$('#cart_buy1').on('click',function () {
+  router
 })
 
 $('#cart-buy').on('click', function() {

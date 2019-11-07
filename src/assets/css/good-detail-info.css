@@ -5,7 +5,7 @@
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	/*text-align: start;*/
+	text-align: none;
 	font-size: 12px;
 	color: #4d4d4d;
 	font-family:"微软雅黑";
@@ -107,7 +107,7 @@ area{outline: none;}
 	width: 100%;
 	height: 596px;
 	min-width: 1200px;
-
+	
 }
 .Xcontent01{
 	width: 1200px;
@@ -261,7 +261,7 @@ area{outline: none;}
 	font-family: "微软雅黑";
 	font-size: 28px;
 	color: #cd2426;
-
+	
 }
 .Xcontent20{
 	height: 20px;
@@ -331,17 +331,17 @@ area{outline: none;}
  width: 100%;
 	height: 100%;
 
-
+	
 }
 .Xcontent29>img{
 	width: 100%;
 	height: 100%;
-
+	
 }
 .Xcontent29{
 	float: left;
 	margin-top: 16px;
-   margin-left: 20px;
+   margin-left: 20px;	
 	border: 1px solid #e8e8e8;
 	width: 50px;
 	height: 50px;
@@ -363,7 +363,7 @@ area{outline: none;}
 	float: left;
 	margin-top: 34px;
 }
-
+	
 .input{
 	height: 30px;
 	width: 60px;
@@ -400,7 +400,7 @@ area{outline: none;}
 .Xcontent34{
 	margin-left: 16px;
 	float: left;
-
+	
 }
 .Xcontent35{
 	float: left;
@@ -467,7 +467,7 @@ area{outline: none;}
 	margin: auto;
 	margin-top: 40px;
 	position: relative;
-
+	
 }
 .Xdetails01{
 	width: 780px;
@@ -481,7 +481,7 @@ area{outline: none;}
 	background: #f5f5f5;
 	border: 1px solid #e1e1e1;
 	float: left;
-
+	
 }
 .Xdetails03{
 	width: 170px;
@@ -510,7 +510,7 @@ area{outline: none;}
 	width: 780px;
 	height: 40px;
 	background: #00f;
-
+	
 }
 .Xdetails02>p{
 	font-family: "微软雅黑";
@@ -518,7 +518,7 @@ area{outline: none;}
 	color: #333333;
 	line-height: 38px;
 	text-align: center;
-
+	
 }
 .Xdetails04>p{
 	font-family: "微软雅黑";
@@ -535,7 +535,7 @@ area{outline: none;}
 .Xdetails002{
 	width: 780px;
 	height: 2760px;
-
+	
 }
 .Xdetails008{
 	width: 310px;
@@ -560,7 +560,7 @@ area{outline: none;}
 	width: 308px;
 	border: 1px solid #e1e1e1;
 	border-top: none;
-
+	
 }
 .Xdetails011>img{
 	margin-left: 24px;
@@ -601,7 +601,7 @@ area{outline: none;}
 	width: 308px;
 	border: 1px solid #e1e1e1;
 	border-top: none;
-
+	
 }
 .Xdetails018>a>img{
 	margin-left: 36px;

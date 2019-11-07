@@ -141,6 +141,7 @@
                   <p style="font-size:12px; color:dimgray">{{similar.description}}</p>
                   <p style="color:red">&yen;{{similar.price}}</p>
                   <p>
+
                       <button type="button" class="btn btn-danger cart-buy" >立即购买</button>
                       <button type="button" class="btn btn-default cart-add">加购物车</button>
                   </p>
@@ -170,6 +171,7 @@
   import 'bootstrap/dist/js/bootstrap'
   import '../../assets/js/bootsnav'
   import '../../assets/js/pic_tab'
+
   import '../../assets/js/detail'
   import '../../assets/js/detail_2'
   import HomeHead1 from '../home/home.vue'

@@ -61,7 +61,7 @@ General
 
 .pageheader{
     padding: 70px 0;
-    /*background-image: url(../images/bg/brick-wall-dark.png);*/
+    background-image: url(../images/bg/brick-wall-dark.png);
     background-color: #f43438;
 }
 
@@ -74,7 +74,7 @@ General
 }
 
 .pageheader.fixed-demo.white{
-    /*background-image: url(../images/bg/home2.jpg);*/
+    background-image: url(../images/bg/home2.jpg);
    background-color: #fff !important;
 }
 
@@ -110,12 +110,12 @@ Home
 =========================== */
 .section.home{
     padding: 100px 0;
-    /*background-image: url(../images/bg/brick-wall-dark.png);*/
+    background-image: url(../images/bg/brick-wall-dark.png);
     background-color: #f43438;
 }
 
 .section.home.dark{
-    /*background-image: url(../images/bg/brick-wall-dark.png);*/
+    background-image: url(../images/bg/brick-wall-dark.png);
     background-color: #fff;
 }
 
@@ -557,7 +557,7 @@ pre span{
     .section.home .affiliates{
         padding-left: 15px;
     }
-
+    
     .section.home .affiliates img{
         display: block;
         position: relative;
